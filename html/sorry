@@ -1,0 +1,43 @@
+
+<html lang="en" dir="ltr">
+
+<head>
+  <title>씬남</title>
+  <script data-ad-client="ca-pub-8610036175576515" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./images/favicon2.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./css/design.css">
+  <link rel="stylesheet" href="./css/ani.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap" rel="stylesheet">
+  <script src= "./javascript/main.js"></script>
+  <script src = "./javascript/slide.js"></script>
+</head>
+
+<body>
+
+  <div class = "menu" id="menu">
+    <a href="/" style="margin-left:3%;">Home</a>
+    <a href="/hello">부장 인삿말</a>
+
+    <div style="display : inline-block;float : right; width : 10%;">
+        <a href="/sorry" style = "text-align : right;">search</a>
+    </div>
+  </div>
+
+    <div style="text-align:center;margin:200px;">
+
+      <h1> 아  쉽  다  !  </h1>
+      <h2> 미구현입니다. 빠른 시일 내에 개발하도록 노력하겠습니다. <h2>
+
+      <div style="text-align:center;">
+        <img src="./images/human/7.jpg" style="width:80%;margin-top:200px;">
+      </div>
+    </div>
+
+</body>
+<footer style="margin-top:200px;width:100%;">
+    <hr>
+    <p>2020 Copyright. All Rights Reserved.</p>
+</footer>
+</html>

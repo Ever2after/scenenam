@@ -1,0 +1,41 @@
+
+<html lang="en" dir="ltr">
+
+<head>
+  <title>씬남</title>
+  <script data-ad-client="ca-pub-8610036175576515" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./images/favicon2.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./css/design.css">
+  <link rel="stylesheet" href="./css/ani.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap" rel="stylesheet">
+  <script src= "./javascript/main.js"></script>
+  <script src = "./javascript/slide.js"></script>
+</head>
+
+<body>
+
+  <div class = "menu" id="menu">
+    <a href="/" style="margin-left:3%;">Home</a>
+    <a href="/hello">부장 인삿말</a>
+    <div style="display : inline-block;float : right; width : 10%;">
+        <a href="/sorry" style = "text-align : right;">search</a>
+    </div>
+  </div>
+
+    <div style="text-align:center;margin:200px;">
+        <p>
+          <h1>안녕하세요, 강성우입니다.</h1>
+          <h2>세종에서 자라난 대충 글로벌 인재 최신 트렌드 일상 영상 편집 동아리 씬남의 홈페이지 방문을 환영합니다.</h2>
+        </p>
+
+    </div>
+    <div style="text-align:center;margin:200px;"><img src="./images/changjo.png"></div>
+
+</body>
+<footer style="margin-top:200px;width:100%;">
+    <hr>
+    <p>2020 Copyright. All Rights Reserved.</p>
+</footer>
+</html>

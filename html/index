@@ -1,0 +1,238 @@
+
+<html lang="en" dir="ltr">
+
+<head>
+  <title>씬남</title>
+  <script data-ad-client="ca-pub-8610036175576515" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./images/favicon2.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./css/design.css">
+  <link rel="stylesheet" href="./css/ani.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap" rel="stylesheet">
+  <script src= "./javascript/main.js"></script>
+  <script src = "./javascript/slide.js"></script>
+
+  <script>
+    var filter = "win16|win32|win64|mac";
+    if (navigator.platform && filter.indexOf(navigator.platform.toLowerCase()) >= 0) {
+    }else{
+      location.href = "http://m.scenenam.com";
+    }
+  </script>
+
+
+</head>
+
+<body>
+
+  <div class = "menu" id="menu">
+    <a href="/" style="margin-left:3%;">Home</a>
+    <a href="/hello">부장 인삿말</a>
+    <a href="#welcome">Who we are</a>
+    <a href="#work">What we make</a>
+    <a href= "#contact">Contact us</a>
+    <div style="display : inline-block;float : right; width : 10%;">
+        <a href="sorry" style = "text-align : right;">search</a>
+    </div>
+  </div>
+
+  <div class="maindoor" id="maindoor">
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 5</div>
+        <a href="https://www.youtube.com/channel/UCW1BgSrbMRW9w2Mi32fVi4w"><img src="./images/logos/0.png" ></a>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 5</div>
+        <a href="#youtube"><img src="./images/ssinstory/4.png"
+        id="https://www.youtube.com/embed/ySAa1osHPlI" onclick="showvideo(this)"></a>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 5</div>
+        <a href="#youtube"><img src="./images/ssinstory/5.png"
+        id="https://www.youtube.com/embed/sqUIzEaT0Lo" onclick="showvideo(this)"></a>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <a href="#youtube"><img src="./images/latte/7.png"
+        id="https://www.youtube.com/embed/dB6Ie_X5m54" onclick="showvideo(this)"></a>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <a href="#youtube"><img src="./images/project/6.png"
+        id="https://www.youtube.com/embed/kKHzGOpvftE" onclick="showvideo(this)"></a>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)" style="left=0;">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)" style="right=0;">&#10095;</a>
+  </div>
+
+  <div id="multiple" style="
+    align-items : center;
+    display : flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top:0;
+  ">
+    <span class="dot" onclick = "currentSlide(1)"></span>
+    <span class="dot" onclick = "currentSlide(2)"></span>
+    <span class="dot" onclick = "currentSlide(3)"></span>
+    <span class="dot" onclick = "currentSlide(4)"></span>
+    <span class="dot" onclick = "currentSlide(5)"></span>
+  </div>
+
+  <div class="welcome" id="welcome">
+    <h1>잘 찾 아 오 셨 습 니 다!</h1>
+      <div style="margin-top : 200px;"></div>
+    <h2>씬남은 모든 재미에 공감합니다</h2>
+  </div>
+
+  <div class="intro" id="intro">
+    <video controls autoplay muted poster="" preload="auto">
+      <source src="./videos/1.mp4" type="video/mp4">
+      You're current browser can't load the video. Use chrome or other brower.
+    </video>
+  </div>
+
+  <div class="welcome">
+    <div style="margin-top : 200px;"></div>
+    <h2> 씬남은 '일상'속의 '재미'를 기록합니다 </h2>
+  </div>
+  <div class="boxcontainer" id="thumbnail">
+    <div class="box">
+      <img src="./images/human/1.jpg">
+      <span>CSS</span>
+    </div>
+    <div class="box">
+      <img src="./images/human/3.png">
+      <span>Image</span>
+    </div>
+    <div class="box">
+      <img src="./images/human/4.png">
+      <span>Hover</span>
+    </div>
+    <div class="box">
+      <img src="./images/human/6.png">
+      <span>Effect</span>
+    </div>
+  </div>
+  <div style="margin:200px;text-align:center">
+    <h1>씬(Scene)을 남기다, 씬남.</h1>
+    <div style="margin:200px;"></div>
+    <h1>더 많은 이야기를 아래에서 만나보세요.</h1>
+  </div>
+  <div class="container work" id="work">
+    <div class="work-category" id="work-category">
+      <button id="sasastory" class="active" onclick="showRequiredCategory(this)">SASA Story</button>
+      <button id="ssinstory" onclick="showRequiredCategory(this)">씬남's Story</button>
+      <button id="project" onclick="showRequiredCategory(this)">프로젝트</button>
+      <button id="short" onclick="showRequiredCategory(this)">대충씬남</button>
+      <button id="latte" onclick="showRequiredCategory(this)">Latte's Horse</button>
+
+    </div>
+    <div class="category-sasastory showcategory">
+      <a href="#youtube"><img src="./images/sasastory/1.png"
+      id="https://www.youtube.com/embed/AQ665E9yqgY" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/sasastory/2.png"
+      id="https://www.youtube.com/embed/CyC9w3S0VQg" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/sasastory/3.png"
+      id="https://www.youtube.com/embed/nLqtw7GyZ2s" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/sasastory/4.png"
+      id="https://www.youtube.com/embed/FShOO_NPgws" onclick="showvideo(this)"></a>
+
+    </div>
+    <div class="category-ssinstory hidecategory">
+      <a href="#youtube"><img src="./images/ssinstory/1.png"
+      id="https://www.youtube.com/embed/jjs0u4r4uao" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/ssinstory/2.png"
+      id="https://www.youtube.com/embed/zaGxgo0pSkI" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/ssinstory/3.png"
+      id="https://www.youtube.com/embed/SDwvB4lmqe8" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/ssinstory/4.png"
+      id="https://www.youtube.com/embed/ySAa1osHPlI" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/ssinstory/5.png"
+      id="https://www.youtube.com/embed/sqUIzEaT0Lo" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/ssinstory/6.png"
+      id="https://www.youtube.com/embed/fAGJLG5pzXM" onclick="showvideo(this)"></a>
+    </div>
+    <div class="category-project hidecategory">
+      <a href="#youtube"><img src="./images/project/1.jpg"
+      id="https://www.youtube.com/embed/SOrNBNFLhoE" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/project/2.png"
+      id="https://www.youtube.com/embed/sF7bR8DI9W0" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/project/3.png"
+      id="https://www.youtube.com/embed/EHyUPHqyjnE" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/project/4.png"
+      id="https://www.youtube.com/embed/OipXoNgr_lA" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/project/5.png"
+      id="https://www.youtube.com/embed/cwJqpLTzvJY" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/project/6.png"
+      id="https://www.youtube.com/embed/kKHzGOpvftE" onclick="showvideo(this)"></a>
+
+
+    </div>
+    <div class="category-short hidecategory">
+      <a href="#youtube"><img src="./images/short/1.png"
+      id="https://www.youtube.com/embed/CMW4pvoW66s" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/short/2.png"
+      id="https://www.youtube.com/embed/-95VFONjpt8" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/short/3.png"
+      id="https://www.youtube.com/embed/yhV3nskZo3I" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/short/4.png"
+      id="https://www.youtube.com/embed/9n7BaaN4U_w" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/short/5.png"
+      id="https://www.youtube.com/embed/ODvIK5B9qQw" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/short/6.png"
+      id="https://www.youtube.com/embed/mdqHkCjtDhk" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/short/7.png"
+      id="https://www.youtube.com/embed/ZfWULTA2wog" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/short/8.png"
+      id="https://www.youtube.com/embed/ZOU34Z-jRvA" onclick="showvideo(this)"></a>
+    </div>
+    <div class="category-latte hidecategory">
+      <a href="#youtube"><img src="./images/latte/1.png"
+      id="https://www.youtube.com/embed/4y9scflFaVc" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/latte/2.png"
+      id="https://www.youtube.com/embed/6QcAJ5NrRAU" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/latte/3.png"
+      id="https://www.youtube.com/embed/3MME-xmhPiM" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/latte/4.png"
+      id="https://www.youtube.com/embed/GqKUHrzIeBI" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/latte/5.png"
+      id="https://www.youtube.com/embed/dFMRq75683Q" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/latte/6.png"
+      id="https://www.youtube.com/embed/JHBaYkytqKs" onclick="showvideo(this)"></a>
+      <a href="#youtube"><img src="./images/latte/7.png"
+      id="https://www.youtube.com/embed/dB6Ie_X5m54" onclick="showvideo(this)"></a>
+    </div>
+  </div>
+
+  <div id="youtube" style="margin-bottom:130px;"></div>
+  <div class="video-container" style="text-align:center;">
+    <object id="youtubecontainer" type="text/html" width="70%" height="700" data="https://www.youtube.com/embed/BEpdZKBsOpI" allowfullscreen="">
+    </object></div>
+
+    <div id = "contact" style="text-align:center;">
+      <span style="margin-top :300px;margin-bottom:100px;">
+      <h1>당신의 일상을 기록해드립니다.<h1>
+        <br><br>
+      <h2>Tel : 010-xxxx-xxxx</h2>
+      <br>
+      <h2>E-mail : joseph316@sasa.hs.kr</h2>
+      <br>
+      <div class="logocontainer">
+        <a href="https://www.facebook.com/scenenam"><img src="./images/logos/facebook.png" style="width:80px;top:0;margin:30px;"></a>
+        <a href="https://www.youtube.com/channel/UCW1BgSrbMRW9w2Mi32fVi4w"><img src="./images/logos/youtube.png" style="width:100px;margin:20px;"></a>
+        </span>
+      </div>
+    </div>
+  </div>
+</body>
+<footer style="margin-top:200px;width:100%;">
+    <hr>
+    <p>2020 Copyright. All Rights Reserved.</p>
+</footer>
+</html>
