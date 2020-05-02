@@ -66,7 +66,20 @@ const showRequiredCategory = event => {
 }
 
 const showvideo = event => {
-  const getref=event.id;
+  const getref = event.id;
   const target = document.getElementById("youtubecontainer");
   target.data = getref;
 }
+
+var menu = 0;
+$(document).ready(function(){
+  $('#menuimg').click(function(){
+    if(menu==0){
+      $('mobilemenu').children().css('display', 'block');
+      menu=1;
+    }else {
+      $('mobilemenu').children().css('display', 'none');
+      menu=0;
+    }
+  });
+});

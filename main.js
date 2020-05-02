@@ -49,6 +49,6 @@ const app = express();
 
 app.use(vhost("scenenam.com", pcapp));
 app.use(vhost("www.scenenam.com", pcapp));
-app.use(vhost("m.scenenam.com", mobileapp));
+app.use(vhost("m.scenenam.com", pcapp));
 
 app.listen(8080);
