@@ -6,7 +6,7 @@ pcapp.use(express.static('public'));
 
 
 pcapp.get('/', function(request, response){
-            fs.readFile('./html/index', 'utf8', function(err, description){
+            fs.readFile('./html/mobile', 'utf8', function(err, description){
                 var html = `${description}`;
                 response.send(`${description}`);
               });

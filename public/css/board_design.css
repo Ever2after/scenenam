@@ -1,0 +1,256 @@
+*{
+  margin : 0px;
+  padding : 0px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+body {
+  background-color : #fcece3;
+
+}
+a{
+  text-decoration: none;
+  color : black;
+}
+
+.boardnav{
+  display : flex;
+  justify-content: center
+}
+
+.boardnav a, .tohome{
+  padding : 12px 15px;
+  background-color : none;
+  color: #ED5565;
+  font-size : 2rem;
+  letter-spacing : 2px;
+  position : relative;
+  overflow : hidden;
+  transition : .5s;
+  z-index : 3;
+  display : inline-block;
+}
+
+.boardnav a:hover, .tohome:hover{
+  color : #fff;
+}
+
+.boardnav a::before, .tohome::before{
+  content : ' ';
+  background-color: #ED5565;
+  position : absolute;
+  top : 0;
+  z-index : -1;
+  transition : .5s;
+}
+.boardnav a:nth-child(1)::before{
+  right : 0;
+  width : 0%;
+  height : 100%;
+}
+.boardnav a:nth-child(2)::before{
+  left : 0;
+  width : 0%;
+  height : 100%;
+}
+.tohome::before{
+  left : 0;
+  width : 100%;
+  height : 0%;
+}
+
+.boardnav a:hover::before{
+  width : 100%;
+}
+.tohome:hover::before{
+  height : 100%;
+}
+
+.thisisboard  {
+  text-align : center;
+  width : 100%;
+  margin : 20px 0 20px 0;
+}
+.table{
+  width : 100%;
+  text-align: center;
+}
+.index{
+  display : flex;
+  text-align : center;
+  justify-content: space-around;
+  width : 80%;
+  margin : 2% 10% 2% 10%;
+  background : #fff;
+  height : 50px;
+  line-height : 50px;
+}
+.index span{
+  display : inline-block;
+  width : 5%;
+}
+#writer{
+  width : 15%;
+}
+#title{
+  flex : 1;
+  text-align: left;
+  cursor : pointer;
+}
+#time{
+  display : inline-block;
+  width : 20%;
+}
+
+#desc{
+  flex : 1;
+  text-align : left;
+  cursor : pointer;
+}
+
+#listhr{
+  margin : 0 10% 0 10%;
+}
+
+
+.rows{
+  display : flex;
+  text-align : center;
+  justify-content: space-around;
+  width : 80%;
+  margin : 1.5% 10% 1.5% 10%;
+}
+.rows div{
+  text-decoration: none;
+  width : 5%;
+}
+
+.description{
+  margin : 0 10% 0 10%;
+  border : 1px solid;
+  display : none;
+}
+
+.write{
+  float : right;
+  margin : 30px;
+}
+
+.read{
+  width : 80%;
+  margin : 5% 10% 3% 10%;
+}
+
+.writerdata{
+
+}
+
+.article_info1{
+  display : flex;
+  flex-wrap : nowrap;
+  width : 100%;
+  margin:2% 0 2% 0;
+  font-size : 20px;
+  line-height : 20px;
+  opacity : 0.4;
+}
+
+.article_info2{
+  display : flex;
+  width : 100%;
+  flex-wrap : nowrap;
+  font-size : 30px;
+  line-height: 30px;
+}
+
+.article_description{
+  margin : 50px 0 50px 0;
+  height : 20%;
+}
+
+.comments{
+    border : 1px;
+    margin : 0 10% 0 10%;
+}
+
+.comment_container{
+  border : 1px ;
+}
+
+.comment_info{
+    display : flex;
+    margin: 10px;
+    font-size : 15px;
+    line-height : 15px;
+}
+
+.comment_desc{
+  word-break: break-all;
+  display : flex;
+  width : 100%;
+  border: 1px;
+  margin : 25px 10px 25px 10px;
+}
+
+.write_comment{
+  margin :0 10% 7% 10%;
+
+}
+
+.comment_form textarea{
+  height : 100px;
+  width : 80%;
+}
+
+.comment_form input {
+  height : 30px;
+}
+
+.writesection{
+  margin : 5% 10% 5% 10%;
+}
+
+#comment_submit{
+    width : 100px;
+    height : 40px;
+    font-size : 20px;
+    line-height: 20px;
+}
+
+#desc_submit{
+  margin : 5% 10% 10% 10%;
+  height : 1000px;
+  display : block;
+}
+#desc_submit div{
+  display : flex;
+  flex-direction : column;
+  width : 100%;
+  margin : 3% 0 3% 0;
+}
+#desc_submit input{
+  height : 30px;
+}
+
+
+#desc_submit textarea{
+  width : 100%;
+  height : 100px;
+}
+.pagenavcontainer{
+  margin : 1%;
+  text-align : center;
+}
+.pagenav{
+  height : 25px;
+  width : 25px;
+  font-size : 25px;
+  line-height: 25px;
+  margin : 10px;
+}
+
+.guest_write{
+  display : flex;
+  width : 100%;
+  margin : 0;
+  height : 70px;
+}

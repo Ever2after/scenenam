@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= data.title %></title>
+    <link rel="stylesheet" href="/css/board_design.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="read">
+      <div class="article_info2">
+        <div><%=data.title%></div>
+
+      </div>
+      <div class="article_info1">
+        <div class="writerdata"><%=data.writer%></div>
+        &nbsp&nbsp&nbsp
+        <div style="width : 20%"><%=time.time%></div>
+      </div>
+
+      <hr>
+      <div style="white-space:pre-wrap;" class="article_description"><%=data.description%></div>
+      <hr>
+      <a href="/board/list/<%=page_id%>"> [목록으로] </a>
+    </div>
+
+    <div  class="comments">
+        <h3>댓글 (<%=data.comment_num%>)</h3>
+        <hr style="border : solid 1px;">
+
+          <%
+            for(var i = 0; i< data2.length; i++) {
+          %>
+          <hr>
+          <div class="comment_container">
+            <div  class="comment_info">
+              <h3><%=data2[i].writer%></h3>
+              &nbsp&nbsp&nbsp&nbsp&nbsp<%=times[i].time%>
+            </div>
+            <div  style="white-space:pre-wrap;" class="comment_desc"><%=data2[i].description%></div>
+          </div>
+
+          <%
+            }
+          %>
+
+    </div>
+    <div class="write_comment">
+      <hr>
+      <h3>댓글 쓰기</h3>
+      <form class="comment_form" action="/board/comment_process" method="post">
+        <div style="margin : 15px 0 15px 0;">닉네임 : <input type="text" name="writer" value="익명"></div>
+        <input style="display : none;" name="parent_id" value="<%=data.id%>">
+        <textarea cols="60" role="12" name="description" id="comment" placeholder="댓글 내용을 입력해주세요." required></textarea>
+        <input id="comment_submit" type="submit" value="슉 제출">
+      </form>
+    </div>
+
+    <div class="write">
+      <a href="/board/write"><h1>글 남기기</h1></a>
+    </div>
+  </body>
+</html>

@@ -7,25 +7,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./images/favicon2.ico" type="image/x-icon">
   <meta charset="utf-8">
-  <link rel="stylesheet" href="./css/design.css">
-  <link rel="stylesheet" href="./css/ani.css">
+  <link rel="stylesheet" href="./css/mobiledesign.css">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap" rel="stylesheet">
-  <script src= "./javascript/main.js"></script>
-  <script src = "./javascript/slide.js"></script>
+  <script src = "./javascript/jquery.js"></script>
+  <script type="text/javascript">
+  var menu = 0;
+  $(document).ready(function(){
+    $('#menuimg').click(function(){
+      if(menu==0){
+        $('.menu').show();
+        $('.menu').addClass('slideRight');
+        menu=1;
+      }else {
+        $('.menu').hide();
+        menu=0;
+      }
+    });
+  });
+  </script>
+
 </head>
 
 <body>
-
-  <div class = "menu" id="menu">
-    <a href="/" style="margin-left:3%;">Home</a>
-    <a href="/hello">부장 인삿말</a>
-
-    <div style="display : inline-block;float : right; width : 10%;">
-        <a href="/sorry" style = "text-align : right;">search</a>
-    </div>
+  <div class="navbar" id="navbar">
+    <img id="menuimg" src="./images/icons8-menu.svg" alt="">
+    SceneNam.com
   </div>
-
-    <div style="text-align:center;margin:5%;">
+  <div class="menu" id="mobilemenu">
+      <a href="/">Home</a>
+      <a href="/mobilehello">부장 인삿말</a>
+      <a href="/sorry">search</a>
+  </div>
+    <div style="text-align:center;margin:15% 5% 5% 5%">
 
       <h1> 아  쉽  다  !  </h1><br>
       <h2> 미구현입니다. 빠른 시일 내에 개발하도록 노력하겠습니다. <h2>

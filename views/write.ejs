@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <link rel="stylesheet" href="/css/board_design.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="writesection">
+          <h1><%= title %></h1>
+    </div>
+
+    <form id = "desc_submit" method="post" action="/board/write" >
+        <div>
+          제목
+          <input type="text" name="title" id="titleinput" placeholder="글의 제목을 입력해주세요.(최대 40자)"required />
+        </div>
+        <div>
+          작성자
+          <input type="text" name="writer" value = "익명" id="writerinput" required/>
+        </div>
+        <div>
+          내용
+          <textarea cols="50" role="12" name="description" id="descinput" placeholder="글의 내용을 입력해주세요." required></textarea>
+        </div>
+        <div>
+          <input id="submitinput" type="submit" value="등록" onclick="alert('등록되었습니다.')">
+        </div>
+        <a href="/board/list/1"><h2><목록으로 돌아가기></h2></a>
+    </form>
+  <script>
+
+  </script>
+  </body>
+</html>

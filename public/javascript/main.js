@@ -3,7 +3,6 @@ window.onscroll = function() {myFunction()};
 function myFunction() {
   appear(document.getElementById("intro"), 0,50,1200,1300  );
   appear(document.getElementById("thumbnail"), 0,50,1300,1500 );
-  //menucolor(document.getElementById("menu"), "#ffffff");
   appear(document.getElementById("work-category"), 0, 50, 1000, 1300);
   appear(document.getElementById("contact"), 0, 50, 1000, 1300);
 }
@@ -70,16 +69,3 @@ const showvideo = event => {
   const target = document.getElementById("youtubecontainer");
   target.data = getref;
 }
-
-var menu = 0;
-$(document).ready(function(){
-  $('#menuimg').click(function(){
-    if(menu==0){
-      $('mobilemenu').children().css('display', 'block');
-      menu=1;
-    }else {
-      $('mobilemenu').children().css('display', 'none');
-      menu=0;
-    }
-  });
-});

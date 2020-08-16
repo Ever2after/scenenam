@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>씬남 방명록</title>
+    <link rel="stylesheet" href="/css/board_design.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    &nbsp&nbsp&nbsp<a class="tohome" href="/" ><strong>홈으로</strong></a>
+    <div class="boardnav">
+        <a href="/board/guest/1"><strong>방명록</strong></a>
+        <a href="/board/list/1">자유게시판</a>
+    </div>
+    <div class="thisisboard">
+          <h1>씬남 방명록</h1>
+          <h3>누군가를 심히 불편케 하는 글은 예고없이 삭제됩니다.</h3>
+    </div>
+
+    <div class="table">
+      <div class="index">
+        <span id="id">번호</span>
+        <span id="desc">내용</span>
+        <span id="writer">작성자</span>
+        <span id="time">작성일</span>
+      </div>
+      <div class="rows">
+        <form class="guest_write" action="/board/guest_write" method="post">
+          <div id="id"></div>
+          <textarea style="flex:1;" name="guest_desc" rows="8" cols="80" placeholder="고운말 한마디..." required></textarea>
+          <input id="writer" type="text" name="guest_name" value="익명" required>
+          <input id = "time" type="submit" name="" value="글 남기기">
+        </form>
+
+    </div>
+
+
+      <%
+          for(var i = rows.length-1-10*(page_id-1); i>-1 && i>rows.length-1-10*(page_id); i--)
+      {
+      %>
+      <div class="rows">
+        <div id="id"><%=rows[i].id%></div>
+        <div id="desc"><%=rows[i].description%> </div>
+        <div id="writer"><%=rows[i].writer%></div>
+        <div id="time"><%=times[i].time %></div>
+
+      <div class="description">
+        <%=rows[i].description%>
+      </div>
+    </div>
+    <hr id="listhr">
+      <%
+      }
+      %>
+   </div>
+
+
+    <div class="pagenavcontainer">
+      <%
+     if(page_id>5){
+       for (var i=page_id-4;(i < page_id+4) && ((i-1)*10< 1+rows.length);i++){
+         if(i==page_id){  %>
+           <span id="current_page" class="pagenav">
+             <a href="/board/guest/<%= i %>"><%= i %></a>
+           </span>
+    <%   }else{  %>
+         <span class="pagenav">
+           <a href="/board/guest/<%= i %>"><%= i %></a>
+         </span>
+         <%
+       }
+     }
+     } else{
+       for(var i = 1; (i< page_id+4) && ((i-1)*10< rows.length);i++ ){
+         if(i==page_id){ %>
+           <span id="current_page" class="pagenav">
+             <a href="/board/guest/<%= i %>"><strong><%= i %></strong></a>
+           </span>
+         <% } else { %>
+         <span class="pagenav">
+           <a href="/board/guest/<%= i %>"><%= i %></a>
+         </span>
+         <%
+       }
+     }
+   }
+     %>
+    </div>
+
+
+  </body>
+</html>

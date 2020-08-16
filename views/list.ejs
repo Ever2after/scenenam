@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>씬남 자유게시판</title>
+    <link rel="stylesheet" href="/css/board_design.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    &nbsp&nbsp&nbsp<a class="tohome" href="/" ><strong>홈으로</strong></a>
+    <div class="boardnav">
+        <a href="/board/guest/1">방명록</a>
+        <a href="/board/list/1"><strong>자유게시판</strong></a>
+    </div>
+
+    <div class="thisisboard">
+          <h1>씬남 자유게시판</h1>
+          <h3>누군가를 심히 불편케 하는 글은 예고없이 삭제됩니다.</h3>
+    </div>
+
+    <div class="table">
+      <div class="index">
+        <span id="id">번호</span>
+        <span id="title">제목</span>
+        <span id="writer">작성자</span>
+        <span id="counter">조회</span>
+        <span id="time">작성일</span>
+      </div>
+      <%
+          for(var i = rows.length-1-10*(page_id-1); i>-1 && i>rows.length-1-10*(page_id); i--)
+      {
+      %>
+      <div class="rows">
+        <div id="id"><%=rows[i].id%></div>
+        <div id="title" onclick = "location.href='/board/read/<%= i+1 %>'"><a href='/board/read/<%= i+1 %>'><%=rows[i].title%> [<%=rows[i].comment_num%>]</a></div>
+        <div id="writer"><%=rows[i].writer%></div>
+
+        <div id="comment_num"><%=rows[i].counter%></div>
+        <div id="time"><%=times[i].time %></div>
+
+      <div class="description">
+        <%=rows[i].description%>
+      </div>
+    </div>
+    <hr id="listhr">
+      <%
+      }
+      %>
+    <div class="pagenavcontainer">
+      <%
+     if(page_id>5){
+       for (var i=page_id-4;(i < page_id+4) && ((i-1)*10< 1+rows.length);i++){
+         if(i==page_id){  %>
+           <span id="current_page" class="pagenav">
+             <a href="/board/list/<%= i %>"><%= i %></a>
+           </span>
+    <%   }else{  %>
+         <span class="pagenav">
+           <a href="/board/list/<%= i %>"><%= i %></a>
+         </span>
+         <%
+       }
+     }
+     } else{
+       for(var i = 1; (i< page_id+4) && ((i-1)*10< rows.length);i++ ){
+         if(i==page_id){ %>
+           <span id="current_page" class="pagenav">
+             <a href="/board/list/<%= i %>"><strong><%= i %></strong></a>
+           </span>
+         <% } else { %>
+         <span class="pagenav">
+           <a href="/board/list/<%= i %>"><%= i %></a>
+         </span>
+         <%
+       }
+     }
+   }
+     %>
+    </div>
+
+
+    </div>
+    <div class="write">
+      <a href="/board/write"><h1>글 남기기</h1></a>
+    </div>
+  </body>
+</html>
